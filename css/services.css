@@ -4,8 +4,9 @@ li{
 
 .grid-parent{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
+
 
 .child1{
     padding: 20px;
@@ -21,10 +22,12 @@ li{
     margin:auto; /* Center horizontally */
 }
 
+
 .hidden-content{
+    padding: 1em;
+    padding-top: .01em;
     margin-left: 1.2em;
     background-color: rgba(217, 217, 217, 0.351);
-    padding-left: .3em;
 }
 
 .list-click{
@@ -34,4 +37,8 @@ li{
 .list-click:hover{
     text-decoration: underline;
     cursor: help;
+}
+
+.ul-marker-outside > li{
+    list-style-position: outside;
 }

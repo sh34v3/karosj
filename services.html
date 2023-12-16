@@ -13,6 +13,7 @@
         <!-- include mathjax -->
         <script id="MathJax-script" async 
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+
         <!-- include TikZjax -->
         <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
         <script src="https://tikzjax.com/v1/tikzjax.js"></script>
@@ -76,37 +77,152 @@
             
             <ul>
               <li>
-                <a id="algebra" class="list-click">Algebra</a>
+                <a id="algebra-i" class="list-click">Algebra I</a>
               </li>
-              <div id="alg-info" class="hidden-content" style="display:none">
-                <p>Algebra is the main introduction to equations with \(\text{unknowns}\). 
-                  It is a large subject that typically spans two years. In Algebra I you'll start with problems like this:
+              <div id="alg-i-info" class="hidden-content" style="display:none">
+                <p>Algebra is a broad category and is essentially using math in combination with <i>unknowns</i>. 
+                  It is a large and foundational subject that typically spans multiple years, with a few years of pre-algebra in middleschool. 
+                </p>
+                <p>
+                  In Algebra I you should already be 
+                  comfortable with <b>equations</b> where you'll be expected to solve for \(x\) like this:
                   \[\frac{x-2}{3} = 7\]
                 </p>
-                <p>Numerous other topics are introduced as a way to deepen your algebra skills while also broadening your mathematical
-                  horizons. The most common of which is an introduction to lines and their equations \(\text{lines}\):
+                <p> You need to have a firm understanding of the order of operations (\(\text{PEMDAS}\)), 
+                  be confident in the all of the properties of multiplication, division, addition, and subtraction,
+                  and understand that equations allow us to <i>substitute</i> one value for another:
+
+                  \[
+                  \begin{align}
+                    \text{Let }\; \; b = 7\\
+                    \\
+                    \text{If }\; \; 3x + 1b &= 2\\
+                    \\
+                    3x + 1(7) &= 2\\
+                    3x + 7 &=2\\
+                    3x &= -5\\
+                    x &= \frac{-5}{3}
+                  \end{align}
+                  \]
+                </p>
+
+                <p>In Algebra I, a broad range of topics are introduced as a way to deepen your algebra and 
+                  arithmetic skills while also broadening your mathematical
+                  horizons. The deepest studied will <b>lines</b> and their equations:
                 </p>
                   <div class="grid-parent">
-                    <div class="child1"><p>\[y = 3x + 2\]</p></div>
+                    <div class="child1"><p>\[y = \frac{x}{2} + 2\]</p></div>
                     <div class="child2">
                       <script type="text/tikz">
-                        \begin{tikzpicture}[>=stealth]
-                          % Define the coordinate axes
-                          \draw[->] (-1,0) -- (5,0) node[right] {$x$};
-                          \draw[->] (0,-1) -- (0,7) node[above] {$y$};
+                        \begin{tikzpicture}
+                          \draw[help lines, color=blue!70, dashed] (-4.9,-4.9) grid (4.9,4.9);
+                          \draw[->,thick] (-5,0)--(5,0) node[right, font=\huge]{$x$};
+                          \draw[->,thick] (0,-5)--(0,5) node[above, font=\huge]{$y$};
 
-                          \foreach \x in {-1,0,1,2,3,4}
-                            \draw (\x,0.1) -- (\x,-0.1) node[below, font=\large] {$\x$};
-                          \foreach \y in {1,2,3,4,5,6}
-                           \draw (0.1,\y) -- (-0.1,\y) node[left, font=\footnotesize] {$\y$};
+                          \node at (0,-0.1) [below right, font=\large] {0};
+                          \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+                            \node at (\x, -0.1) [below, font=\large] {\x};
+                          \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+                            \node at (-0.1, \y) [left, font=\large] {\y};
 
-                          % Plot the linear function y = 2x + 1
-                          \draw[domain=-1:4, smooth, variable=\x, blue] plot ({\x},{2*\x + 1}) node[right] {$y = 2x + 1$};
-                      \end{tikzpicture}
+
+                            \draw[<->,thick,blue, thick, domain=-5:5, samples=100] plot (\x, {.5*\x + 1});
+                        \end{tikzpicture}
                       </script>
+                    </div>
                   </div>
-                  </tr>
+                <p>Students in Algebra I will be expected to master many different aspects of working with lines,
+                  including: finding the slope, regression, finding perpendicular and parallel lines, and applications of lines. 
+                  By the end of Algebra I, students will come to understand lines as more than simple equations; they are <b>linear functions</b>.
+                  The distinction between these terms should be meaningful as it's the bedrock for Algebra II.
+                </p>
+
+                <p>Aside from lines, students should be introduced to many other topics. The most common being: </p>
+                <ul class="ul-marker-outside">
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">inequalities</div>
+                      <div class="child2">
+                        <div class="grid-col">
+                          <div>
+                            <script type="text/tikz">
+                              \begin{tikzpicture}
+                                \draw[<->,thick] (-5,0)--(5,0) node[right, font=\huge]{$x$};
+      
+                                \node at (0,-0.1) [below right, font=\large] {0};
+                                \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+                                  \node at (\x, -0.1) [below, font=\large] {\x};
+    
+                                  \draw[->, red, ultra thick] (-2,0) -- (3,0);
+                                  \draw[red, fill=white](-2,0) circle (3pt);
+                                  \node[font=\huge] at (0,1) {x $>$  -2};
+                              \end{tikzpicture}
+                            </script>
+                          </div>
+                          <div>
+                            <script type="text/tikz">
+                              \begin{tikzpicture}
+                                \draw[help lines, color=blue!70, dashed] (-4.9,-4.9) grid (4.9,4.9);
+                                \draw[->,thick] (-5,0)--(5,0) node[right, font=\huge]{$x$};
+                                \draw[->,thick] (0,-5)--(0,5) node[above, font=\huge]{$y$};
+
+                                \node at (0,-0.1) [below right, font=\large] {0};
+                                \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+                                  \node at (\x, -0.1) [below, font=\large] {\x};
+                                \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+                                  \node at (-0.1, \y) [left, font=\large] {\y};
+
+
+                                  \draw[<->,thick,blue, thick, domain=-5:5, samples=100] plot (\x, {.5*\x + 1});
+                                  \fill[blue!30, fill opacity=0.35, domain=-4.9:4.9, variable=\x] plot ({\x}, {.5*\x + 1}) --  (4.9, 4.9) -- (-4.9, 4.9) -- cycle;
+                                  \node at (2.3, 1) [font=\huge] {$y > 0.5x + 1$};
+                              \end{tikzpicture}
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">
+                        exponents
+                      </div>
+                      <div class="child2">
+                        \(\begin{align}
+                          y^4 &= y \cdot y \cdot y \cdot y \\
+                          y^4 \cdot y^3 &= y^{4+3}\\
+                          \frac{y^4}{y^2} &= y^4-2\\
+                          y^{-1} &= \frac{1}{y}\\
+                          y^0 &= 1\\
+                          \end{align}
+                        \)
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">
+                        radicals
+                      </div>
+                      <div class="child2">
+                        \(\begin{align}
+                          \sqrt{x^2} &=x \\
+                          \sqrt[n]{x^n} &=x \\
+                          \sqrt{x} &= x^{\frac{1}{2}} \\
+                          (\sqrt[3]{x})^2 &= x^{\frac{2}{3}}
+                          \end{align}
+                        \)
+                      </div>
+                    </div>
+                  </li>
+                  <li>distribution and factoring</li>
+                  <li>quadratic functions</li>
+                </ul>
               </div>
+              <li>
+                <a id="algebra-ii" class="list-click">Algebra II</a>
+              </li>
               <li><a id="geometry" class="list-click">Geometry</a></li>
               <div id="geo-info" class="hidden-content" style="display:none">
                 <p>geo is hard</p>
@@ -154,7 +270,8 @@
     <script>
       var open_info;
 
-      var alg_info = document.getElementById('alg-info');
+      var alg_i_info = document.getElementById('alg-i-info');
+      var alg_ii_info = document.getElementById('alg-ii-info');
       var geo_info = document.getElementById('geo-info');
       var model_info = document.getElementById('model-info');
       var pcal_info = document.getElementById('pcal-info');
@@ -166,9 +283,14 @@
       var AP_CSA_info = document.getElementById('AP-CSA-info');
 
 
-      document.getElementById('algebra').addEventListener('click', function() {
-        console.log("algebra clicked!")
-        update_page(alg_info);
+      document.getElementById('algebra-i').addEventListener('click', function() {
+        console.log("algebra i clicked!")
+        update_page(alg_i_info);
+      });
+
+      document.getElementById('algebra-ii').addEventListener('click', function() {
+        console.log("algebra ii clicked!")
+        update_page(alg_ii_info);
       });
 
       document.getElementById('geometry').addEventListener('click', function() {
