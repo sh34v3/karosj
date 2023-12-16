@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jason Karos - Services</title>
+        <link rel="icon" href="learning-svg.png" sizes="any">
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/services.css">
+        <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+        <!-- include mathjax -->
+        <script id="MathJax-script" async 
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+        <!-- include TikZjax -->
+        <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+        <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+        <!-- make sure the webpage is friendly with mobile -->
+        <!-- width=device-width sets the width of the page to follow the screen-width of the device -->
+        <!-- initial-scale=1 sets the initial zoom level to 100% -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    </head>
+    <body>
+      <div id="top-level">
+        <div id="navigation">
+          <div id="navigation-logo"><a href=".">Jason Karos</a></div>
+          <div id="navigation-list">
+            <div class="navigation-entry"><a class="" href="index.html">Home</a></div>
+            <div class="navigation-entry"><a class="" href="about.html">About</a></div>
+            <div class="navigation-entry"><a class="" href="articles.html">Blog</a></div>
+            <div class="navigation-entry"><a class="navigation-entry-current href="services.html">Tutoring</a></div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="contact" class="small-center">
+            <div id="contact-left">
+                <img id="portrait" src="portrait.jpeg" alt="Portrait">
+            </div>
+            <div id="contact-right">
+                    <a class="contact-entry" href="mailto:jkaros@mxschool.edu">
+                        <i class="fas fa-fw fa-envelope"></i>
+                        jkaros@mxschool.edu
+                    </a>
+                    <br />
+                    <a class="contact-entry" href="https://www.linkedin.com/in/karosj/">
+                        <i class="fab fa-fw fa-linkedin-in"></i>
+                        linkedin.com/in/karosj
+                    </a>
+              
+            </div>
+        </div>
+        <div id="bio">
+            <p>
+                I am a mathematics and computer science educator based in middlesex county Massachusetts. 
+            </p>
+            <p>
+                My interest include algorithms and data science. Specifically, I'm very interested in how optimized spaced-repitition algorithms can make learning more enriching, easier, and manageable for the everyday person.
+            </p>
+            <p>
+                I currently work as a teacher at the <a href="https://www.mxschool.edu/">Middlesex School</a>. I also offer tutorting services and education mentorship to students in Middlesex County.
+            </p>
+        </div>
+          <p>
+            <a href="resume.pdf"><strong>Resume</strong> (pdf)</a>
+          </p>
+
+            <h2>Tutoring</h2>
+            
+            <p>
+            I offer STEM tutoring, focusing on Math and Computer Science.
+            </p>
+
+            <h3>Math</h3>
+            
+            <ul>
+              <li>
+                <a id="algebra" class="list-click">Algebra</a>
+              </li>
+              <div id="alg-info" class="hidden-content" style="display:none">
+                <p>Algebra is the main introduction to equations with \(\text{unknowns}\). 
+                  It is a large subject that typically spans two years. In Algebra I you'll start with problems like this:
+                  \[\frac{x-2}{3} = 7\]
+                </p>
+                <p>Numerous other topics are introduced as a way to deepen your algebra skills while also broadening your mathematical
+                  horizons. The most common of which is an introduction to lines and their equations \(\text{lines}\):
+                </p>
+                  <div class="grid-parent">
+                    <div class="child1"><p>\[y = 3x + 2\]</p></div>
+                    <div class="child2">
+                      <script type="text/tikz">
+                        \begin{tikzpicture}[>=stealth]
+                          % Define the coordinate axes
+                          \draw[->] (-1,0) -- (5,0) node[right] {$x$};
+                          \draw[->] (0,-1) -- (0,7) node[above] {$y$};
+
+                          \foreach \x in {-1,0,1,2,3,4}
+                            \draw (\x,0.1) -- (\x,-0.1) node[below, font=\large] {$\x$};
+                          \foreach \y in {1,2,3,4,5,6}
+                           \draw (0.1,\y) -- (-0.1,\y) node[left, font=\footnotesize] {$\y$};
+
+                          % Plot the linear function y = 2x + 1
+                          \draw[domain=-1:4, smooth, variable=\x, blue] plot ({\x},{2*\x + 1}) node[right] {$y = 2x + 1$};
+                      \end{tikzpicture}
+                      </script>
+                  </div>
+                  </tr>
+              </div>
+              <li><a id="geometry" class="list-click">Geometry</a></li>
+              <div id="geo-info" class="hidden-content" style="display:none">
+                <p>geo is hard</p>
+              </div>
+              <li><a id="modeling" class="list-click">Modeling</a></li>
+              <div id="model-info" class="hidden-content" style="display:none">
+                <p>model is hard</p>
+              </div>
+              <li><a id="precalc" class="list-click">Pre-calculus</a></li>
+              <div id="pcal-info" class="hidden-content" style="display:none">
+                <p>pcal is hard</p>
+              </div>
+              <li><a id="calculus" class="list-click">Calculus</a></li>
+              <div id="calc-info" class="hidden-content" style="display:none">
+                <p>calc is hard</p>
+              </div>
+            </ul>
+            
+            <h3>Computer Science</h3>
+            <ul>
+              <li><a id="python" class="list-click">Python</a></li>
+              <div id="py-info" class="hidden-content" style="display:none">
+                <p>py is hard</p>
+              </div>
+              <li><a id="java" class="list-click">Java</a></li>
+              <div id="java-info" class="hidden-content" style="display:none">
+                <p>java is hard</p>
+              </div>
+              <li><a id="web-dev" class="list-click">Web Application Programming</a></li>
+              <div id="webdev-info" class="hidden-content" style="display:none">
+                <p>webdev is hard</p>
+              </div>
+              <li><a id="AP-CSP" class="list-click">AP Computer Science Principles</a></li>
+              <div id="AP-CSP-info" class="hidden-content" style="display:none">
+                <p>apcsp is hard</p>
+              </div>
+              <li><a id="AP-CSA" class="list-click">AP Computer Science A</a></li>
+              <div id="AP-CSA-info" class="hidden-content" style="display:none">
+                <p>apcsa is hard</p>
+              </div>
+            </ul>
+            </p>
+        </div>
+    </body>
+    <script>
+      var open_info;
+
+      var alg_info = document.getElementById('alg-info');
+      var geo_info = document.getElementById('geo-info');
+      var model_info = document.getElementById('model-info');
+      var pcal_info = document.getElementById('pcal-info');
+      var calc_info = document.getElementById('calc-info');
+      var py_info = document.getElementById('py-info');
+      var java_info = document.getElementById('java-info');
+      var webdev_info = document.getElementById('webdev-info');
+      var AP_CSP_info = document.getElementById('AP-CSP-info');
+      var AP_CSA_info = document.getElementById('AP-CSA-info');
+
+
+      document.getElementById('algebra').addEventListener('click', function() {
+        console.log("algebra clicked!")
+        update_page(alg_info);
+      });
+
+      document.getElementById('geometry').addEventListener('click', function() {
+        console.log("geometry clicked!")
+        update_page(geo_info);
+      });
+      
+      document.getElementById('modeling').addEventListener('click', function() {
+        console.log("modeling clicked!")
+        update_page(model_info);
+      });
+
+      document.getElementById('precalc').addEventListener('click', function() {
+        console.log("precalc clicked!")
+        update_page(pcal_info);
+      });
+
+      document.getElementById('calculus').addEventListener('click', function() {
+        console.log("calculus clicked!")
+        update_page(calc_info);
+      });
+
+      document.getElementById('python').addEventListener('click', function() {
+        console.log("python clicked!")
+        update_page(py_info);
+      });
+
+      document.getElementById('java').addEventListener('click', function() {
+        console.log("java clicked!")
+        update_page(java_info);
+      });
+
+      document.getElementById('web-dev').addEventListener('click', function() {
+        console.log("web-dev clicked!")
+        update_page(webdev_info);
+      });
+
+      document.getElementById('AP-CSP').addEventListener('click', function() {
+        console.log("AP-CSP clicked!")
+        update_page(AP_CSP_info);
+      });
+
+      document.getElementById('AP-CSA').addEventListener('click', function() {
+        console.log("AP-CSA clicked!")
+        update_page(AP_CSA_info);
+      });
+
+      function update_page(tar){
+        console.log(open_info == null);
+        console.log(tar != open_info);
+
+
+        if (tar == open_info){  // if you're clicking on an open info
+          tar.style.display = "none";
+          open_info = null;
+        } else if (open_info != null && open_info != tar){ //if you're clicking on an unopened info and another is also open
+          open_info.style.display = "none";
+          tar.style.display="block";
+          open_info = tar;
+        } else{ // if you're clicking an unopened info and no other is open
+          tar.style.display="block";
+          open_info = tar;
+        }
+      }
+    </script>
+</html>
