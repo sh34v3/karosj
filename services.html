@@ -63,10 +63,6 @@
                 I currently work as a teacher at the <a href="https://www.mxschool.edu/">Middlesex School</a>. I also offer tutorting services and education mentorship to students in Middlesex County.
             </p>
         </div>
-          <p>
-            <a href="resume.pdf"><strong>Resume</strong> (pdf)</a>
-          </p>
-
             <h2>Tutoring</h2>
             
             <p>
@@ -146,7 +142,7 @@
                         <div class="grid-col">
                           <div>
                             <script type="text/tikz">
-                              \begin{tikzpicture}
+                              \begin{tikzpicture}[scale=0.8]
                                 \draw[<->,thick] (-5,0)--(5,0) node[right, font=\huge]{$x$};
       
                                 \node at (0,-0.1) [below right, font=\large] {0};
@@ -161,7 +157,7 @@
                           </div>
                           <div>
                             <script type="text/tikz">
-                              \begin{tikzpicture}
+                              \begin{tikzpicture}[scale=0.8]
                                 \draw[help lines, color=blue!70, dashed] (-4.9,-4.9) grid (4.9,4.9);
                                 \draw[->,thick] (-5,0)--(5,0) node[right, font=\huge]{$x$};
                                 \draw[->,thick] (0,-5)--(0,5) node[above, font=\huge]{$y$};
@@ -189,12 +185,13 @@
                         exponents
                       </div>
                       <div class="child2">
-                        \(\begin{align}
-                          y^4 &= y \cdot y \cdot y \cdot y \\
-                          y^4 \cdot y^3 &= y^{4+3}\\
-                          \frac{y^4}{y^2} &= y^4-2\\
-                          y^{-1} &= \frac{1}{y}\\
-                          y^0 &= 1\\
+                        \(
+                          \begin{align}
+                            y^4 &= y \cdot y \cdot y \cdot y \\
+                            y^4 \cdot y^3 &= y^{4+3}\\
+                            \frac{y^4}{y^2} &= y^4-2\\
+                            y^{-1} &= \frac{1}{y}\\
+                            y^0 &= 1\\
                           \end{align}
                         \)
                       </div>
@@ -206,18 +203,92 @@
                         radicals
                       </div>
                       <div class="child2">
-                        \(\begin{align}
-                          \sqrt{x^2} &=x \\
-                          \sqrt[n]{x^n} &=x \\
-                          \sqrt{x} &= x^{\frac{1}{2}} \\
-                          (\sqrt[3]{x})^2 &= x^{\frac{2}{3}}
+                        \(
+                          \begin{align}
+                            \sqrt{x^2} &=x \\
+                            \sqrt[n]{x^n} &=x \\
+                            \sqrt{x} &= x^{\frac{1}{2}} \\
+                            (\sqrt[3]{x})^2 &= x^{\frac{2}{3}} \\
+                            \sqrt{72} = \sqrt{9\cdot 4 \cdot 2} &= 6 \sqrt{2} 
                           \end{align}
                         \)
                       </div>
                     </div>
                   </li>
-                  <li>distribution and factoring</li>
-                  <li>quadratic functions</li>
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">
+                        distribution
+                      </div>
+                      <div class="child2">
+                        <script type="text/tikz">
+                        \begin{tikzpicture}
+                          % Nodes for the quantities
+                          \node [font=\large] (quantity1) at (0,0) {$(2x + 3)$};
+                          \node [font=\large] (quantity2) at (1.5,0) {$(3z + 2)$};
+
+                          \node (q1f) at (-.35, .15) {};
+                          \node (q1l) at ( .3, -.15) {};
+
+                          \node (q2f) at (1.2, .15) {};
+                          \node (q2l) at (2.1, .15) {};
+                          \node (q2bf) at (1.2, -.15) {};
+                          \node (q2bl) at (2.1, -.15) {};
+                        
+                          % Curved arrow representing distribution
+                          \draw[->, bend left=30, thick] (q1f) to (q2f);
+                          \draw[->, bend left=30, thick] (q1f) to (q2l);
+                          \draw[->, bend left=-30, thick] (q1l) to (q2bf);
+                          \draw[->, bend left=-30, thick] (q1l) to (q2bl);
+                        \end{tikzpicture}
+                        </script>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">
+                        factoring
+                      </div>
+                      <div class="child2">
+                        \(
+                          \begin{align}
+                            3x^2-\frac{x}{2} &=x(3x-\frac{1}{2})\\ 
+                            x^2 + 3x -10 &= (x+5)(x-2)\\
+                            2x^2 + 7x + 3 &= (2x+1)(x+3)
+                          \end{align}
+                        \)
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid-parent">
+                      <div class="child1">
+                        quadratic functions
+                      </div>
+                      <div class="child2">
+                        <script type="text/tikz">
+                          \begin{tikzpicture}[scale=0.4]
+                                \draw[->,thick] (-10,0)--(10,0) node[right, font=\huge]{$x$};
+                                \draw[->,thick] (0,-10)--(0,10) node[above, font=\huge]{$y$};
+                                  
+
+                                \node at (0,-0.1) [below right, font=\large] {0};
+                                \foreach \x in {-8,-6,-4,-2,2,4,6,8}
+                                  \draw[thick] (\x,-0.35)--(\x,0.35);
+                                \foreach \x in {-8,-6,-4,-2,2,4,6,8}
+                                  \node at (\x,-0.9) [font=\large] {\x};
+                                \foreach \y in {-8,-6,-4,-2,2,4,6,8}
+                                  \draw[thick] (-0.35,\y)--(0.35,\y);
+                                \foreach \y in {-8,-6,-4,-2,2,4,6,8}
+                                  \node at (-.9,\y) [font=\large] {\y};
+
+                                \node at (3,5) [below right, font=\large] {$x^2 / 2 - 2$};
+                                \draw[<->,thick,blue, thick, domain=-3:4, samples=100] plot (\x, {0.5*(\x-1)^2-2});
+                              \end{tikzpicture}
+                        </script>
+                      </div>
+                  </li>
                 </ul>
               </div>
               <li>
