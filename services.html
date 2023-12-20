@@ -122,7 +122,7 @@
                             \node at (-0.1, \y) [left, font=\large] {\y};
 
 
-                            \draw[<->,thick,blue, thick, domain=-5:5, samples=100] plot (\x, {.5*\x + 1});
+                          \draw[<->,thick,blue, thick, domain=-5:5, samples=100] plot (\x, {.5*\x + 1});
                         \end{tikzpicture}
                       </script>
                     </div>
@@ -179,6 +179,7 @@
                       </div>
                     </div>
                   </li>
+                  <hr>
                   <li>
                     <div class="grid-parent">
                       <div class="child1">
@@ -197,6 +198,7 @@
                       </div>
                     </div>
                   </li>
+                  <hr>
                   <li>
                     <div class="grid-parent">
                       <div class="child1">
@@ -215,12 +217,14 @@
                       </div>
                     </div>
                   </li>
+                  <hr>
                   <li>
                     <div class="grid-parent">
                       <div class="child1">
                         distribution
                       </div>
                       <div class="child2">
+                        <div id="factoring">
                         <script type="text/tikz">
                         \begin{tikzpicture}
                           % Nodes for the quantities
@@ -243,8 +247,10 @@
                         \end{tikzpicture}
                         </script>
                       </div>
+                      </div>
                     </div>
                   </li>
+                  <hr>
                   <li>
                     <div class="grid-parent">
                       <div class="child1">
@@ -261,6 +267,7 @@
                       </div>
                     </div>
                   </li>
+                  <hr>
                   <li>
                     <div class="grid-parent">
                       <div class="child1">
@@ -285,6 +292,7 @@
 
                                 \node at (3,5) [below right, font=\large] {$x^2 / 2 - 2$};
                                 \draw[<->,thick,blue, thick, domain=-3:4, samples=100] plot (\x, {0.5*(\x-1)^2-2});
+
                               \end{tikzpicture}
                         </script>
                       </div>
@@ -294,6 +302,73 @@
               <li>
                 <a id="algebra-ii" class="list-click">Algebra II</a>
               </li>
+              <div id="alg-ii-info" class="hidden-content" style="display:none">
+                <p>
+                  To build upon the foundations of Algebra I, Algebra II centers on the abstraction of the <b>function</b>, 
+                  essentially a relationship between two variables: the <b>independent variable</b> who's numberline is the horizontal axis and 
+                  the <b>dependent variable</b> who's number line creates the vertical axis. For brevity, I will simply refer to these as the <b>independent</b>
+                  and <b>dependendent</b>.
+                </p>
+                <div class="grid-parent">
+                  <div class="child1">
+                    <p>
+                      The <b>independent</b> represents something that changes of its own accord without influence from the <b>dependendent</b>.
+                      The common example is time, as the passage of time influences most phenomenon, but no phenomenon influences the passage of time.
+                      The <b>dependendent</b> is a value that that is entirely influenced by the <b>independent</b>. The common example is distance traveled,
+                      for example, consider figure 1. The \(t\)-axis represents the hours past, while the \(d\)-axis represents the distance traveled by
+                      a car travling in a straight line
+                    </p>
+                  </div>
+                  <div class="child2">
+                    <script type="text/tikz">
+                      \begin{tikzpicture}[scale=1.2]
+
+
+                        \draw[->,thick] (-1,0)--(5,0) node[right, font=\huge]{$t$};
+
+
+                        \node at (0,-0.1) [below left, font=\large] {0};
+                        \foreach \x in {1,2,3,4}
+                          \node at (\x, -0.5) [below, font=\large] {\x};
+                        \foreach \x in {1,2,3,4}
+                          \draw[thick] (\x,-0.35)--(\x,0.35);
+
+                        \begin{scope}[y=2] %create a scope so we can properly scale the y-axis
+
+                        \node at (2.5, 170) [font=\Large] {Fig. 1};
+
+                        \draw[->,thick] (0,-20)--(0,160) node[above, font=\huge]{$d$};
+                        \foreach \y in {20,40,60,80,100,120,140}
+                          \node at (-0.5, \y) [left, font=\large] {\y};
+                        \foreach \y in {20,40,60,80,100,120,140}
+                          \draw[thick] (-0.35,\y)--(0.35,\y);
+
+
+                        %draw datapoints
+                        \node at (1,40) [circle, fill=blue] {};
+                        \node at (2,80) [circle, fill=blue] {};
+                        \node at (3,120) [circle, fill=blue] {};
+                        \node at (4,160) [circle, fill=blue!30] {};
+                        \node at (5, 150) [font=\large] {predicted value!};
+
+
+                        %draw potential model
+
+                        \draw [<->, thick, color=blue!30, dashed, domain=0.5:3.5, samples=100] plot (\x, {40*\x}); 
+                        \node at (4, 80) [color=blue, font=\Large] {$t = 40x$};
+                        \end{scope}
+
+                      \end{tikzpicture}
+                    </script>
+                  </div>
+                </div>
+                <p>
+                  Using data points, key parts of the relationship can be determined: such as the <b>rate of change</b> (slope).
+                  By doing this, a <b>function</b> can be created that <i>models</i> the relationship. Using this function, we could now 
+                  estimate/predict other values. This process of creating a line from points is called <b>regression</b>, and is 
+                  essentially "data science".
+                </p>
+              </div> <!--end algebra-ii-info-->
               <li><a id="geometry" class="list-click">Geometry</a></li>
               <div id="geo-info" class="hidden-content" style="display:none">
                 <p>geo is hard</p>

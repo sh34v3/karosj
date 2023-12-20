@@ -9,14 +9,12 @@ li{
 
 
 .child1{
-    padding: 20px;
     display: flex;
     align-items: center; /* Center vertically */
     margin:auto; /* Center horizontally */
 }
 
 .child2{
-    padding: 20px;
     display: flex;
     align-items: center; /* Center vertically */
     margin:auto; /* Center horizontally */
@@ -44,11 +42,31 @@ li{
 }
 
 @media (max-width: 600px) {
+
+    li{
+        padding-bottom: 20px;
+    }
+
     .grid-parent {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 2fr;
     grid-template-areas:
         "item1"
         "item2";
+    }
+
+    .MathJax {
+        font-size: 5vw !important;
+    }
+
+    svg{
+        transform: scale(0.60);
+        width: auto;
+    }
+    div{
+        width: auto !important;
+    }
+
+    #factoring > div >  svg{
+        transform: scale(1.0) !important;
     }
 }
