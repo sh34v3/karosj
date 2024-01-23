@@ -171,7 +171,7 @@
 
                                   \draw[<->,thick,blue, thick, domain=-5:5, samples=100] plot (\x, {.5*\x + 1});
                                   \fill[blue!30, fill opacity=0.35, domain=-4.9:4.9, variable=\x] plot ({\x}, {.5*\x + 1}) --  (4.9, 4.9) -- (-4.9, 4.9) -- cycle;
-                                  \node at (2.3, 1) [font=\huge] {$y > 0.5x + 1$};
+                                  \node at (2.3, 1) [font=\Large] {$y > 0.5x + 1$};
                               \end{tikzpicture}
                             </script>
                           </div>
@@ -350,7 +350,6 @@
                         \node at (3,120) [circle, fill=blue] {};
                         \node at (4,160) [circle, fill=blue!30] {};
                         \node at (5, 150) [font=\large] {predicted value!};
-                        \draw 
 
 
                         %draw potential model
@@ -366,8 +365,40 @@
                 <p>
                   Using data points, key parts of the relationship can be determined: such as the <b>rate of change</b> (slope).
                   By doing this, a <b>function</b> can be created that <i>models</i> the relationship. Using this function, we could now 
-                  estimate/predict other values. This process of creating a line from points is called <b>regression</b>, and is 
-                  essentially "data science".
+                  estimate/predict other values. This process of creating a curve from points is called <b>regression</b>, and--to me-- is at the core algebra II.
+                </p>
+                <p>
+                  Algebra II seeks to increase a student's profficiency in describing functions. By examining a function's formula and graph, a student's will learn to determine their 
+                  properties like concavity, domain, range, and whether they're increasing or decreasing over various intervals. 
+                  To introduce and hone algebra skills, students are introduced to two new <b>parent functions</b>: <b>exponential</b> and <b>logorithmic </b> functions.
+                  These functions can be applied in a variety of applied 
+                  contexts--exponentials especially in financial and biological sciences. 
+                  For example, Fig.2 below models the cost of $100 of credit card debt over 12 years at a 20% interest rate.
+                </p>
+                <div class="centered">
+                  <script type="text/tikz">
+                    \begin{tikzpicture}[scale=0.8]
+                    \draw[->,thick] (-1,0)--(12,0) node[right, font=\huge]{$x$};
+                    \draw[->,thick] (0,-1)--(0, 7) node[above, font=\huge]{$y$};
+
+                    \node at (0,-0.1) [below right, font=\large] {0};
+                    \foreach \x in {1,2,3,4,5,6,7,8,9,10,11}
+                      \node at (\x, -0.1) [below, font=\large] {\x};
+                    \foreach \y in {-100,100,200,300,400,500,600}
+                      \node at (-0.1, \y/100) [left, font=\large] {\y};
+
+                    \node at (6, 8) [font=\Large] {Fig. 2};
+                    \node at (6, -3)[font=\Large]{Notice that that the slope of the line is always getting steeper!};
+
+                    \draw[<->,thick,blue, thick, domain=-1:11, samples=100] plot (\x, {1*e^(0.20*\x)});
+
+                    \end{tikzpicture}
+                  </script>
+                </div>
+                <p>
+                  These two functions demonstrate the relationship between a function and its inverse. Namely
+                  that a function \( f \) and its inverse \(f^{-1}\) undo each other algebraiclly. \[ f^{-1}(f(x)) = x \] Students will learn to find the formula 
+                  of the inverse function \(f^{-1}\) given the formula of \(f\).
                 </p>
               </div> <!--end algebra-ii-info-->
               <li><a id="geometry" class="list-click">Geometry</a></li>
